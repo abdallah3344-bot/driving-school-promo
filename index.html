@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نظام إدارة مدارس السياقة</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+
+  body{ margin:0; background:#F7F4ED; color:#12211F;
+        font-family:"IBM Plex Sans Arabic","Segoe UI",sans-serif; }
+  a{ color:#0F6B62; }
+  a:hover{ color:#0A4B44; }
+  .wrap{ width:100%; max-width:1180px; margin:0 auto; padding-inline:32px; box-sizing:border-box; }
+  .kufi{ font-family:"Reem Kufi","IBM Plex Sans Arabic",sans-serif; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
+  .grid3{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+  .grid2{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+  .card{ background:#FFFFFF; border:1px solid #E3DED1; border-radius:14px; padding:24px; }
+  .btn{ display:inline-flex; align-items:center; gap:10px; min-height:52px; padding:0 26px;
+        border-radius:12px; font-weight:600; font-size:17px; text-decoration:none; box-sizing:border-box; }
+  .btn-primary{ background:#0F6B62; color:#FFFFFF; border:1px solid #0F6B62; }
+  .btn-primary:hover{ background:#0A4B44; color:#FFFFFF; }
+  .btn-ghost{ background:transparent; color:#12211F; border:1px solid #C9C2B2; }
+  .btn-ghost:hover{ background:#EFEADF; color:#12211F; }
+  .eyebrow{ font-size:14px; font-weight:600; letter-spacing:.04em; color:#0F6B62; margin:0 0 14px; }
+  h2{ font-family:"Reem Kufi",sans-serif; font-size:40px; line-height:1.3; margin:0 0 16px; font-weight:600; }
+  h3{ font-size:19px; line-height:1.5; margin:0 0 8px; font-weight:600; }
+  p{ margin:0; line-height:1.85; }
+  .muted{ color:#4E5A57; }
+  .sec{ padding:88px 0; }
+  .chap{ width:100%; text-align:start; font-family:inherit; font-size:15.5px; color:#12211F;
+         background:#FFFFFF; border:1px solid #E3DED1; border-radius:10px; padding:12px 14px;
+         cursor:pointer; line-height:1.5; }
+  .chap:hover{ background:#EFEADF; border-color:#C9C2B2; }
+  @media (max-width: 900px){
+    .tourgrid{ grid-template-columns:repeat(1,minmax(0,1fr)) !important; }
+    .tourgrid > div:first-child{ max-width:320px; margin-inline:auto; }
+    .chaps{ grid-template-columns:repeat(1,minmax(0,1fr)) !important; }
+    .grid4,.grid3,.grid2{ grid-template-columns:repeat(1,minmax(0,1fr)); }
+    h2{ font-size:30px; }
+    .sec{ padding:56px 0; }
+    .wrap{ padding-inline:20px; }
+  }
+  .chap.on{ background:#0F6B62; color:#FFFFFF; border-color:#0F6B62; }
+</style>
+</head>
+<body>
+<div style="width: 100%; box-sizing: border-box; overflow-x: hidden;">
+
+  <!-- الترويسة -->
+  <div style="border-bottom: 1px solid #E3DED1; background: #F7F4ED;">
+    <div class="wrap" style="display: flex; align-items: center; gap: 16px; height: 76px;">
+      <div style="width: 38px; height: 38px; border-radius: 10px; background: #0F6B62; display: flex; align-items: center; justify-content: center;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 3v4M12 17v4M3 12h4M17 12h4"></path>
+        </svg>
+      </div>
+      <span class="kufi" style="font-size: 20px; font-weight: 600;">نظام إدارة مدارس تعليم السياقة</span>
+      <span style="flex-grow: 1;"></span>
+      <a class="btn btn-ghost" style="min-height: 44px; font-size: 15px;" href="tel:+972599525522">‎0599525522</a>
+    </div>
+  </div>
+
+  <!-- الواجهة -->
+  <div style="background: linear-gradient(180deg, #F7F4ED 0%, #EFEADF 100%); padding: 96px 0 84px;">
+    <div class="wrap">
+      <p class="eyebrow">برنامج عربي كامل لمكتب مدرسة السياقة</p>
+      <h1 class="kufi" style="font-size: 58px; line-height: 1.25; margin: 0 0 22px; font-weight: 700; max-width: 900px;">
+        مدرسة السياقة كاملة،<br>في برنامج واحد.
+      </h1>
+      <p style="font-size: 21px; max-width: 760px; margin: 0 0 34px;" class="muted">
+        من تسجيل الطالب إلى استمارة الفحص، ومن الحصة إلى الفاتورة والعمولة.
+        يعمل على أجهزة المكتب كلها في آنٍ واحد، ومعه بوابة على جوال الطالب والمدرب.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px;">
+        <a class="btn btn-primary" href="https://test-driving-demo.netlify.app" target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+          جرّب البرنامج الآن
+        </a>
+        <a class="btn btn-ghost" href="https://wa.me/972599525522">اطلب عرض سعر</a>
+      </div>
+      <p style="font-size: 15px;" class="muted">تجربة فورية بلا تسجيل ولا تثبيت — يفتح في المتصفح مباشرة.</p>
+    </div>
+  </div>
+
+  <!-- شريط الثقة -->
+  <div style="background: #12211F; color: #F7F4ED; padding: 26px 0;">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; font-size: 16px;">
+      <span style="font-weight: 600;">يعمل اليوم في مدارس سياقة عاملة</span>
+      <span style="opacity: .55;">•</span>
+      <span style="opacity: .85;">يعمل بالعربية من اليمين لليسار بالكامل</span>
+      <span style="opacity: .55;">•</span>
+      <span style="opacity: .85;">بلا تثبيت — يفتح من المتصفح</span>
+    </div>
+  </div>
+
+  <!-- الفيديو التعريفي -->
+  <div class="sec" id="tour">
+    <div class="wrap">
+      <p class="eyebrow">جولة مصوّرة</p>
+      <h2 style="max-width: 820px;">شوف البرنامج شغّال — بالصوت والصورة.</h2>
+      <p style="font-size: 19px; max-width: 760px; margin-bottom: 40px;" class="muted">
+        جولة كاملة في كل شاشة، شرحاً باللهجة الفلسطينية، من أول تسجيل الطالب إلى بوابة المدرب.
+        المدة ٨ دقائق و٥٠ ثانية — واضغط أي فقرة لتنتقل إليها مباشرة.
+      </p>
+
+      <div style="display: grid; grid-template-columns: 340px minmax(0,1fr); gap: 40px; align-items: start;" class="tourgrid">
+        <div style="background: #12211F; border-radius: 30px; padding: 12px; box-shadow: 0 18px 50px rgba(18,33,31,.22);">
+          <video id="tourVideo" controls playsinline preload="none"
+                 poster="https://res.cloudinary.com/jamnmeuw/video/upload/so_1,w_720,h_1280,c_fill,q_auto,f_jpg/v1790158057/driving-school/full-tour.jpg"
+                 src="https://res.cloudinary.com/jamnmeuw/video/upload/v1790158057/driving-school/full-tour.mp4"
+                 style="width: 100%; display: block; border-radius: 20px; background: #000;"></video>
+        </div>
+
+        <div>
+          <p style="font-size: 14px; font-weight: 600; color: #0F6B62; margin-bottom: 14px;">الفهرس</p>
+          <div class="chaps" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px;">
+            <button class="chap" type="button" data-t="0">‎0:00 · مقدمة</button>
+            <button class="chap" type="button" data-t="20">‎0:20 · الدخول والشاشة الرئيسية</button>
+            <button class="chap" type="button" data-t="56">‎0:56 · الطلاب ومسح الهوية</button>
+            <button class="chap" type="button" data-t="100">‎1:40 · الموظفون والمدربون</button>
+            <button class="chap" type="button" data-t="131">‎2:11 · السيارات</button>
+            <button class="chap" type="button" data-t="163">‎2:43 · مصاريف المكتب والتسعير</button>
+            <button class="chap" type="button" data-t="189">‎3:09 · جدولة الدروس</button>
+            <button class="chap" type="button" data-t="219">‎3:39 · الامتحانات</button>
+            <button class="chap" type="button" data-t="246">‎4:06 · الفواتير والمدفوعات</button>
+            <button class="chap" type="button" data-t="273">‎4:33 · الشيكات والأوراق الرسمية</button>
+            <button class="chap" type="button" data-t="303">‎5:03 · كشف الحساب والذمم</button>
+            <button class="chap" type="button" data-t="328">‎5:28 · التقارير</button>
+            <button class="chap" type="button" data-t="394">‎6:34 · المدارس والمستخدمون</button>
+            <button class="chap" type="button" data-t="429">‎7:09 · الأدوات العامة</button>
+            <button class="chap" type="button" data-t="451">‎7:31 · بوابة الطلاب والمدربين</button>
+            <button class="chap" type="button" data-t="519">‎8:39 · خاتمة</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ما الذي يحلّه -->
+  <div class="sec" style="background: #EFEADF;">
+    <div class="wrap">
+      <p class="eyebrow">المشكلة</p>
+      <h2 style="max-width: 820px;">دفاتر متفرّقة، وأرقام تتبدّل، وحساب عمولة على ورقة.</h2>
+      <p style="font-size: 19px; max-width: 820px; margin-bottom: 40px;" class="muted">
+        معظم المكاتب تُمسك الطلاب في دفتر، والحصص في آخر، والفواتير في ثالث — ثم يُحسب استحقاق المدرب آخر الشهر يدوياً.
+        هذا البرنامج يجمعها في مكان واحد، ويُخرج الورقة الرسمية جاهزة للطباعة.
+      </p>
+      <div class="grid3">
+        <div class="card">
+          <h3>كل شيء مرتبط</h3>
+          <p class="muted" style="font-size: 16px;">تسجّل الحصة فتُصدر فاتورتها، وتُحتسب عمولة مدربها، وتُضاف ساعتها لرصيد الطالب — بخطوة واحدة.</p>
+        </div>
+        <div class="card">
+          <h3>رقم لا يتبدّل</h3>
+          <p class="muted" style="font-size: 16px;">كل فاتورة وسند وحصة وامتحان له رقم ثابت لا يتكرر ولا يتغيّر بالحذف — فما طُبع ووُزّع يبقى صحيحاً.</p>
+        </div>
+        <div class="card">
+          <h3>الورقة الرسمية جاهزة</h3>
+          <p class="muted" style="font-size: 16px;">استمارة الفحص العملي وقائمة المتقدمين تُطبع من البرنامج مطابقة للنموذج المعتمد، بلا إعادة كتابة.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- الميزات -->
+  <div class="sec">
+    <div class="wrap">
+      <p class="eyebrow">ماذا يشمل</p>
+      <h2>كل شاشة يحتاجها المكتب</h2>
+      <div class="grid4" style="margin-top: 36px;">
+
+        <div class="card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 11h-6"></path></svg>
+          <h3 style="margin-top: 14px;">الطلاب ومسح الهوية</h3>
+          <p class="muted" style="font-size: 15px;">صوّر الهوية فتُعبّأ بياناته: الاسم والرقم وتاريخ الميلاد والمدينة — بلا إدخال يدوي.</p>
+        </div>
+
+        <div class="card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+          <h3 style="margin-top: 14px;">الحصص والجدولة</h3>
+          <p class="muted" style="font-size: 15px;">ساعات التدريب ومتابعتها، وتنبيه قبل تسجيل حصة مكرّرة لنفس الطالب في اليوم نفسه.</p>
+        </div>
+
+        <div class="card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          <h3 style="margin-top: 14px;">الامتحانات</h3>
+          <p class="muted" style="font-size: 15px;">نظري وعملي: الموعد والسيارة والمدرب المسؤول والنتيجة، وقائمة المتقدمين تُطبع بضغطة.</p>
+        </div>
+
+        <div class="card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h6"></path></svg>
+          <h3 style="margin-top: 14px;">الفواتير والسندات</h3>
+          <p class="muted" style="font-size: 15px;">فواتير وسندات قبض وصرف وشيكات، بترقيم متسلسل ثابت وطباعة مباشرة.</p>
+        </div>
+
+        <div class="card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          <h3 style="margin-top: 14px;">عمولات المدربين</h3>
+          <p class="muted" style="font-size: 15px;">نسبة أو مبلغ، وقاعدة خاصة لكل مدرب ولكل فئة رخصة — وتُثبَّت لحظة إنجاز الحصة.</p>
+        </div>
+
+        <div class="card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14l-1.5-6.5A2 2 0 0 0 15.6 9H8.4a2 2 0 0 0-1.9 1.5z"></path><circle cx="7.5" cy="17.5" r="1.8"></circle><circle cx="16.5" cy="17.5" r="1.8"></circle></svg>
+          <h3 style="margin-top: 14px;">السيارات</h3>
+          <p class="muted" style="font-size: 15px;">المصاريف والحركة اليومية وقراءة العدّاد وتغيير الزيت، لكل سيارة على حدة.</p>
+        </div>
+
+        <div class="card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M7 15l4-5 3 3 5-7"></path></svg>
+          <h3 style="margin-top: 14px;">التقارير والذمم</h3>
+          <p class="muted" style="font-size: 15px;">من عليه وكم، وما حُصّل وما بقي، وتقارير يومية وشهرية جاهزة للطباعة.</p>
+        </div>
+
+        <div class="card">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V7a6 6 0 1 1 12 0v2"></path><rect x="4" y="9" width="16" height="12" rx="2"></rect></svg>
+          <h3 style="margin-top: 14px;">صلاحيات المستخدمين</h3>
+          <p class="muted" style="font-size: 15px;">لكل موظف حسابه وصلاحيته، وسجل نشاط يبيّن من فعل ماذا ومتى.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- البوابة -->
+  <div class="sec">
+    <div class="wrap">
+      <div class="grid2" style="align-items: center;">
+        <div>
+          <p class="eyebrow">على جوال الطالب والمدرب</p>
+          <h2>بوابة تُغنيك عن مئة مكالمة.</h2>
+          <p style="font-size: 18px; margin-bottom: 26px;" class="muted">
+            رابط يفتحه الطالب أو المدرب على جواله — بلا تطبيق يُحمَّل، وبلا كلمة سر يحفظها:
+            يدخل برقم هويته وجواله المسجّلين لديك.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+              <p style="font-size: 16px;"><strong>الطالب</strong> يتابع حصصه وامتحاناته وما عليه من ذمّة، ويطلب موعد حصة.</p>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+              <p style="font-size: 16px;"><strong>المدرب</strong> يرى جدول يومه وطلابه، ويسجّل أن الحصة تمّت — والمكتب يعتمدها.</p>
+            </div>
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F6B62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+              <p style="font-size: 16px;">لا يكتب أحد في بياناتك: البوابة تعرض فقط، والمكتب وحده يعتمد ويحفظ.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: center;">
+          <div style="width: 290px; border: 10px solid #12211F; border-radius: 36px; background: #FFFFFF; padding: 18px 16px 22px; box-sizing: border-box;">
+            <div style="width: 84px; height: 5px; border-radius: 3px; background: #D6CFC0; margin: 0 auto 18px;"></div>
+            <p style="font-size: 13px; font-weight: 600; color: #0F6B62; margin-bottom: 4px;">مرحباً محمود</p>
+            <p class="kufi" style="font-size: 19px; font-weight: 600; margin-bottom: 16px;">٨ حصص مُنجزة</p>
+            <div style="background: #F7F4ED; border-radius: 12px; padding: 13px; margin-bottom: 10px;">
+              <p style="font-size: 13px; font-weight: 600;">حصة عملي — الخميس ٩:٠٠</p>
+              <p style="font-size: 12px;" class="muted">مع المدرب أيمن · ٤٠ دقيقة</p>
+            </div>
+            <div style="background: #F7F4ED; border-radius: 12px; padding: 13px; margin-bottom: 10px;">
+              <p style="font-size: 13px; font-weight: 600;">فحص عملي — الأحد ١٠:٣٠</p>
+              <p style="font-size: 12px;" class="muted">مركبة ١١١١١ب</p>
+            </div>
+            <div style="border: 1px solid #E3DED1; border-radius: 12px; padding: 13px;">
+              <p style="font-size: 12px;" class="muted">المتبقي عليك</p>
+              <p class="kufi" style="font-size: 20px; font-weight: 600;">٣٢٠ ₪</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- الاعتمادية -->
+  <div class="sec" style="background: #12211F; color: #F7F4ED;">
+    <div class="wrap">
+      <p class="eyebrow" style="color: #7FD3C8;">لماذا يُطمأن إليه</p>
+      <h2 style="color: #F7F4ED;">مكتب فيه ثلاثة أجهزة يعمل كجهاز واحد.</h2>
+      <div class="grid4" style="margin-top: 36px;">
+        <div style="border-top: 2px solid #2C3B38; padding-top: 20px;">
+          <h3 style="color: #F7F4ED;">مزامنة لحظية</h3>
+          <p style="font-size: 15px; color: #B9C4C1;">ما يُدخله موظف يصل بقية الأجهزة خلال ثوانٍ، وعند إغلاق البرنامج تُرفع البيانات قبل أن يُغلق.</p>
+        </div>
+        <div style="border-top: 2px solid #2C3B38; padding-top: 20px;">
+          <h3 style="color: #F7F4ED;">لا يطمس أحد عمل أحد</h3>
+          <p style="font-size: 15px; color: #B9C4C1;">إن حفظ جهازان معاً، يُدمج العملان بدل أن يمحو أحدهما الآخر — وبلا تكرار.</p>
+        </div>
+        <div style="border-top: 2px solid #2C3B38; padding-top: 20px;">
+          <h3 style="color: #F7F4ED;">نسخ احتياطية</h3>
+          <p style="font-size: 15px; color: #B9C4C1;">بياناتك محفوظة على السحابة، ويمكن الرجوع لنسخة سابقة عند الحاجة.</p>
+        </div>
+        <div style="border-top: 2px solid #2C3B38; padding-top: 20px;">
+          <h3 style="color: #F7F4ED;">يُحدّث نفسه</h3>
+          <p style="font-size: 15px; color: #B9C4C1;">التحسينات تصل أجهزتك تلقائياً — بلا تثبيت ولا زيارة فنّي.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- الدعوة -->
+  <div class="sec">
+    <div class="wrap" style="text-align: center;">
+      <h2 style="margin-bottom: 14px;">جرّبه قبل أن تسأل عن سعره.</h2>
+      <p style="font-size: 19px; max-width: 640px; margin: 0 auto 32px;" class="muted">
+        النسخة التجريبية مفتوحة ببيانات وهمية — افتحها وسجّل طالباً وحصة وافتح تقريراً، ثم احكم.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 44px;">
+        <a class="btn btn-primary" href="https://test-driving-demo.netlify.app" target="_blank" rel="noopener">جرّب البرنامج الآن</a>
+        <a class="btn btn-ghost" href="https://wa.me/972599525522">تواصل على واتساب</a>
+      </div>
+      <div class="card" style="max-width: 560px; margin: 0 auto; text-align: right;">
+        <p style="font-size: 14px; margin-bottom: 14px;" class="muted">للتواصل والاستفسار عن التركيب والتدريب</p>
+        <p style="font-size: 17px; margin-bottom: 8px;"><strong>عبد الله المصري</strong> — طولكرم، فلسطين</p>
+        <p style="font-size: 17px; margin-bottom: 8px;">هاتف وواتساب: <a href="tel:+972599525522">‎0599525522</a></p>
+        <p style="font-size: 17px;">البريد: <a href="mailto:abdallah3344@hotmail.com">abdallah3344@hotmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- التذييل -->
+  <div style="border-top: 1px solid #E3DED1; padding: 28px 0;">
+    <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+      <p style="font-size: 14px;" class="muted">© ٢٠٢٦ عبد الله المصري — جميع الحقوق محفوظة.</p>
+      <span style="flex-grow: 1;"></span>
+      <p style="font-size: 14px;" class="muted">صُمّم وبُني في طولكرم، فلسطين.</p>
+    </div>
+  </div>
+
+</div>
+<script>
+document.querySelectorAll('.chap').forEach(function(b){
+  b.addEventListener('click', function(){
+    var v = document.getElementById('tourVideo');
+    if(!v) return;
+    v.currentTime = Number(b.dataset.t) || 0;
+    var p = v.play(); if(p && p.catch) p.catch(function(){});
+    v.scrollIntoView({behavior:'smooth', block:'center'});
+    document.querySelectorAll('.chap').forEach(function(x){ x.classList.remove('on'); });
+    b.classList.add('on');
+  });
+});
+</script>
+</body>
+</html>
