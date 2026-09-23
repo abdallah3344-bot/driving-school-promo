@@ -33,8 +33,6 @@
          cursor:pointer; line-height:1.5; }
   .chap:hover{ background:#EFEADF; border-color:#C9C2B2; }
   @media (max-width: 900px){
-    .tourgrid{ grid-template-columns:repeat(1,minmax(0,1fr)) !important; }
-    .tourgrid > div:first-child{ max-width:320px; margin-inline:auto; }
     .chaps{ grid-template-columns:repeat(1,minmax(0,1fr)) !important; }
     .grid4,.grid3,.grid2{ grid-template-columns:repeat(1,minmax(0,1fr)); }
     h2{ font-size:30px; }
@@ -99,41 +97,40 @@
   <div class="sec" id="tour">
     <div class="wrap">
       <p class="eyebrow">جولة مصوّرة</p>
-      <h2 style="max-width: 820px;">شوف البرنامج شغّال — بالصوت والصورة.</h2>
-      <p style="font-size: 19px; max-width: 760px; margin-bottom: 40px;" class="muted">
-        جولة كاملة في كل شاشة، شرحاً باللهجة الفلسطينية، من أول تسجيل الطالب إلى بوابة المدرب.
-        المدة ٨ دقائق و٥٠ ثانية — واضغط أي فقرة لتنتقل إليها مباشرة.
+      <h2 style="max-width: 820px;">شوف البرنامج شغّال — شاشة شاشة.</h2>
+      <p style="font-size: 19px; max-width: 780px; margin-bottom: 36px;" class="muted">
+        جولة كاملة داخل البرنامج بشرح باللهجة الفلسطينية، من تسجيل الطالب إلى بوابة المدرب والتقارير.
+        المدة ٩ دقائق و١١ ثانية — واضغط أي فقرة لتنتقل إليها مباشرة.
       </p>
 
-      <div style="display: grid; grid-template-columns: 340px minmax(0,1fr); gap: 40px; align-items: start;" class="tourgrid">
-        <div style="background: #12211F; border-radius: 30px; padding: 12px; box-shadow: 0 18px 50px rgba(18,33,31,.22);">
-          <video id="tourVideo" controls playsinline preload="metadata"
-                 poster="https://res.cloudinary.com/jamnmeuw/video/upload/so_2,w_540,h_960,c_fill,q_auto,f_jpg/v1790170549/driving-school/full-tour-clean.jpg"
-                 src="https://res.cloudinary.com/jamnmeuw/video/upload/v1790170549/driving-school/full-tour-clean.mp4"
-                 style="width: 100%; display: block; border-radius: 20px; background: #EFEADF;"></video>
-        </div>
+      <div style="background: #12211F; border-radius: 18px; padding: 10px; box-shadow: 0 18px 50px rgba(18,33,31,.22); margin-bottom: 28px;">
+        <video id="tourVideo" controls playsinline preload="metadata"
+               poster="tour-poster.jpg" src="tour.mp4"
+               style="width: 100%; display: block; border-radius: 12px; background: #000;"></video>
+      </div>
 
-        <div>
-          <p style="font-size: 14px; font-weight: 600; color: #0F6B62; margin-bottom: 14px;">الفهرس</p>
-          <div class="chaps" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px;">
-            <button class="chap" type="button" data-t="0">‎0:00 · مقدمة</button>
-            <button class="chap" type="button" data-t="20">‎0:20 · الدخول والشاشة الرئيسية</button>
-            <button class="chap" type="button" data-t="56">‎0:56 · الطلاب ومسح الهوية</button>
-            <button class="chap" type="button" data-t="100">‎1:40 · الموظفون والمدربون</button>
-            <button class="chap" type="button" data-t="131">‎2:11 · السيارات</button>
-            <button class="chap" type="button" data-t="163">‎2:43 · مصاريف المكتب والتسعير</button>
-            <button class="chap" type="button" data-t="189">‎3:09 · جدولة الدروس</button>
-            <button class="chap" type="button" data-t="219">‎3:39 · الامتحانات</button>
-            <button class="chap" type="button" data-t="246">‎4:06 · الفواتير والمدفوعات</button>
-            <button class="chap" type="button" data-t="273">‎4:33 · الشيكات والأوراق الرسمية</button>
-            <button class="chap" type="button" data-t="303">‎5:03 · كشف الحساب والذمم</button>
-            <button class="chap" type="button" data-t="328">‎5:28 · التقارير</button>
-            <button class="chap" type="button" data-t="394">‎6:34 · المدارس والمستخدمون</button>
-            <button class="chap" type="button" data-t="429">‎7:09 · الأدوات العامة</button>
-            <button class="chap" type="button" data-t="451">‎7:31 · بوابة الطلاب والمدربين</button>
-            <button class="chap" type="button" data-t="519">‎8:39 · خاتمة</button>
-          </div>
-        </div>
+      <p style="font-size: 14px; font-weight: 600; color: #0F6B62; margin-bottom: 12px;">الفهرس</p>
+      <div class="chaps" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px;">
+            <button class="chap" type="button" data-t="0">‎0:00 · مقدمة — ما هو البرنامج</button>
+            <button class="chap" type="button" data-t="25">‎0:25 · الدخول والشاشة الرئيسية</button>
+            <button class="chap" type="button" data-t="61">‎1:01 · الطلاب</button>
+            <button class="chap" type="button" data-t="108">‎1:48 · الموظفون والمدربون</button>
+            <button class="chap" type="button" data-t="136">‎2:16 · السيارات</button>
+            <button class="chap" type="button" data-t="171">‎2:51 · مصاريف المكتب</button>
+            <button class="chap" type="button" data-t="177">‎2:57 · تسعير الدروس وعمولات المدربين</button>
+            <button class="chap" type="button" data-t="198">‎3:18 · جدولة الدروس</button>
+            <button class="chap" type="button" data-t="230">‎3:50 · بوابة الطلاب والمدربين</button>
+            <button class="chap" type="button" data-t="297">‎4:57 · الامتحانات</button>
+            <button class="chap" type="button" data-t="327">‎5:27 · الفواتير والمدفوعات</button>
+            <button class="chap" type="button" data-t="355">‎5:55 · متابعة الشيكات</button>
+            <button class="chap" type="button" data-t="361">‎6:01 · أوراق العمل والدوائر الرسمية</button>
+            <button class="chap" type="button" data-t="387">‎6:27 · كشف الحساب</button>
+            <button class="chap" type="button" data-t="393">‎6:33 · الذمم المترصدة</button>
+            <button class="chap" type="button" data-t="411">‎6:51 · التقارير</button>
+            <button class="chap" type="button" data-t="481">‎8:01 · بيانات المدارس</button>
+            <button class="chap" type="button" data-t="491">‎8:11 · المستخدمون والصلاحيات</button>
+            <button class="chap" type="button" data-t="517">‎8:37 · أدوات عامة</button>
+            <button class="chap" type="button" data-t="539">‎8:59 · خاتمة</button>
       </div>
     </div>
   </div>
